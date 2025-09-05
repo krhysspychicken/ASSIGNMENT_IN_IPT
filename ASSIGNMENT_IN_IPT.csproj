@@ -67,10 +67,61 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\logo.png" />
+    <Content Include="Master Page\231868TubaonAboutMe.aspx" />
+    <Content Include="Master Page\231868TubaonAppointment.aspx" />
+    <Content Include="Master Page\231868TubaonContact.aspx" />
+    <Content Include="Master Page\231868TubaonHomepage.aspx" />
+    <Content Include="Master Page\231868TubaonLayout.aspx" />
+    <Content Include="Master Page\231868TubaonPoster.aspx" />
+    <Content Include="Master Page\231868TubaonResume.aspx" />
+    <Content Include="Master Page\231868TubaonServices.aspx" />
+    <Content Include="Master Page\231868TubaonWritesUps.aspx" />
+    <Content Include="Master Page\231868TubaonOrganization.aspx" />
     <Content Include="Master Page\WebForm1.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Master Page\231868TubaonAboutMe.aspx.cs">
+      <DependentUpon>231868TubaonAboutMe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Page\231868TubaonAppointment.aspx.cs">
+      <DependentUpon>231868TubaonAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Page\231868TubaonContact.aspx.cs">
+      <DependentUpon>231868TubaonContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Page\231868TubaonHomepage.aspx.cs">
+      <DependentUpon>231868TubaonHomepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Page\231868TubaonLayout.aspx.cs">
+      <DependentUpon>231868TubaonLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Page\231868TubaonPoster.aspx.cs">
+      <DependentUpon>231868TubaonPoster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Page\231868TubaonResume.aspx.cs">
+      <DependentUpon>231868TubaonResume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Page\231868TubaonServices.aspx.cs">
+      <DependentUpon>231868TubaonServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Page\231868TubaonWritesUps.aspx.cs">
+      <DependentUpon>231868TubaonWritesUps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Page\231868TubaonOrganization.aspx.cs">
+      <DependentUpon>231868TubaonOrganization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Master Page\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -97,9 +148,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Web Forms\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

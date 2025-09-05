@@ -1,7 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ASSIGNMENT_IN_IPT.Master_Page.Site1" %>
-
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
     <title></title>
@@ -11,36 +9,112 @@
         .auto-style1 {
             width: 100%;
         }
-        .auto-style2 {
+        .header {
             height: 86px;
-        }
-        .auto-style2 {
             background-color: #7F0000;
         }
-        .auto-style3 {
-            height: 19px;
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
         }
-        .auto-style4 {
-            height: 120px;
+        .site-title {
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-size: 2em;
+            flex: 1;
+        }
+        .nav-bar {
+            background-color: #a00000;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .nav-bar a, .nav-bar .aspNetHyperLink {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background 0.2s;
+            display: inline-block;
+        }
+        .nav-bar a:hover, .nav-bar .aspNetHyperLink:hover {
+            background-color: #d32f2f;
+        }
+        .footer {
+            height: 60px;
+            background-color: #7F0000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto; /* This pushes footer to bottom */
+        }
+        .content-area {
+            flex: 1; /* Takes remaining space */
+            padding: 20px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        html {
+            height: 100%;
+        }
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
     </style>
 </head>
-<body style="height: 316px">
+<body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                <table cellpadding="0" cellspacing="0" class="auto-style1">
-                    <tr>
-                        <td class="auto-style2"></td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style4"></td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style3"></td>
-                    </tr>
-                </table>
-            </asp:ContentPlaceHolder>
+        <div class="main-container">
+            <!-- HEADER - This will appear on all pages -->
+            <table cellpadding="0" cellspacing="0" class="auto-style1">
+                <tr>
+                    <td class="header">
+                        <div class="header-content">
+                            <span class="site-title">My Website Header</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nav-bar">
+                        <asp:HyperLink ID="lnkHomepage" runat="server" NavigateUrl="~/Master Page/231868TubaonHomepage.aspx" CssClass="aspNetHyperLink">HOMEPAGE</asp:HyperLink>
+                        <asp:HyperLink ID="lnkAboutMe" runat="server" NavigateUrl="~/Master Page/231868TubaonAboutMe.aspx" CssClass="aspNetHyperLink">ABOUT ME</asp:HyperLink>
+                        <asp:HyperLink ID="lnkOrganization" runat="server" NavigateUrl="~/Master Page/231868TubaonOrganization.aspx" CssClass="aspNetHyperLink">ORGANIZATION</asp:HyperLink>
+                        <asp:HyperLink ID="lnkContact" runat="server" NavigateUrl="~/Master Page/231868TubaonContact.aspx" CssClass="aspNetHyperLink">CONTACT</asp:HyperLink>
+                        <asp:HyperLink ID="lnkAppointment" runat="server" NavigateUrl="~/Master Page/231868TubaonAppointment.aspx" CssClass="aspNetHyperLink">APPOINTMENT</asp:HyperLink>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- MAIN CONTENT - This is where child pages content will go -->
+            <div class="content-area">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <!-- Child page content will be inserted here -->
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <!-- FOOTER - This will appear on all pages -->
+            <table cellpadding="0" cellspacing="0" class="auto-style1">
+                <tr>
+                    <td class="footer">
+                        <!-- Add your footer content here -->
+                        © 2025 My Website. All rights reserved.
+                    </td>
+                </tr>
+            </table>
         </div>
     </form>
 </body>
